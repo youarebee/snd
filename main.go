@@ -103,6 +103,12 @@ func processEvent(eventChan chan Event) {
 			stop(1)
 			stop(2)
 			stop(3)
+		default:
+
+			stop(0)
+			stop(1)
+			stop(2)
+			stop(3)
 		}
 	}
 }
