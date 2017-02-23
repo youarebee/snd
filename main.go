@@ -122,7 +122,13 @@ func play(i int) {
 		}
 	}
 
-	cmd := exec.Command("mpg123", fmt.Sprintf("%d.mp3", i))
+	arr := make([]string, 0, 50)
+	s := fmt.Sprintf("%d.mp3", i)
+	for i := 0; i < cap(arr); i++ {
+		arr = append(arr, s)
+	}
+
+	cmd := exec.Command("mpg123", arr...)
 	cmd.Start()
 	players[i] = cmd
 }
