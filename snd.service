@@ -1,0 +1,9 @@
+[Unit]
+Description=Snd daemon
+
+[Service]
+WorkingDirectory=/home/pi/go/src/github.com/youarebee/snd
+ExecStart=/home/pi/go/src/github.com/youarebee/snd/snd
+ 
+[Install]
+WantedBy=multi-user.target
